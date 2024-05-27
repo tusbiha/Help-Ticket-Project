@@ -17,7 +17,17 @@
                     </x-nav-link>
                 </div>
             </div>
-
+                <div class="sm:flex" style="justify-content: flex-start;">
+                    <x-nav-link :href="route('ticket.create')">
+                        {{ __('Support Ticket') }}
+                    </x-nav-link>
+                </div>
+            <!--<div class="flex flex-col justify-center">
+            <x-primary-button class="ms-3">
+                <a href="{{route('ticket.create')}}" class="ml-3 bg-white rounded-lg">
+                    Support Ticket
+            </x-primary-button>
+            </div>-->
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
@@ -32,7 +42,7 @@
                             </div>
                         </button>
                     </x-slot>
-
+                    
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
